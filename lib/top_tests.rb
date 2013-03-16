@@ -16,10 +16,12 @@ module TopTests
   ########################
 
   def before_setup
+    super
     @timer_started_at = Time.now
   end
 
   def after_teardown
+    super
     if @timer_started_at  # Unset when a setup hook fails before top test.
       name = self.class.to_s + '#' + @__name__
       self.class.tests_durations << [name, Time.now - @timer_started_at]
