@@ -2,12 +2,16 @@
 Top tests displays your 10 slowest tests after execution. The goal is to help you
 keeping your tests fast.
 
-Moreover top tests can break your build if any test is taking longer than the specified max duration.
+Moreover top tests can break your build if any test is taking longer than a specified duration.
+
+Since version 0.0.4, Top tests works only with Ruby 2.0 and Rails 4.0
 
 == How to use it?
-First of all top tests works only with MiniTest (>= 2.11.2). Add top_tests to your Gemfile.
+Add to your Gemfile.
 
-    gem 'top_tests'
+    group :test do
+      gem 'top_tests'
+    end
 
 Then require top tests and just include it into your test class:
 

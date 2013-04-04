@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = 'top_tests'
   s.version     = TopTests::VERSION.dup
   s.authors     = ['Alexis Bernard']
-  s.email       = ['alexis@official.fm']
-  s.homepage    = 'https://github.com/officialfm/top_tests'
+  s.email       = ['alexis@bernard.io']
+  s.homepage    = 'https://github.com/alexisbernard/top_tests'
   s.summary     = 'Top tests lists the 10 slowest tests after execution'
   s.description = 'Top tests lists the 10 slowest tests after execution'
 
