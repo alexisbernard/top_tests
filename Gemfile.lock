@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    top_tests (0.0.3)
+    top_tests (0.0.4)
 
 GEM
   remote: http://rubygems.org/

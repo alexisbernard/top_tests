@@ -22,9 +22,10 @@ module TopTests
 
   def after_teardown
     super
-    if @timer_started_at  # Unset when a setup hook fails before top test.
-      name = self.class.to_s + '#' + @__name__
-      self.class.tests_durations << [name, Time.now - @timer_started_at]
+    if @timer_started_at # Unset when a setup hook fails before top test.
+      # Instance variable @__name__ is used prior to minitest 5.
+      test_name = "#{self.class}##{@__name__ || name}"
+      self.class.tests_durations << [test_name, Time.now - @timer_started_at]
     end
   end
 
