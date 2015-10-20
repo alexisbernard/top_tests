@@ -8,7 +8,11 @@ module TopTests
 
   def self.included(klass)
     klass.extend(ClassMethods)
-    MiniTest::Unit.after_tests { klass.after_all_tests }
+    if Minitest.respond_to?(:after_run)
+      Minitest.after_run { klass.after_all_tests }
+    else
+      MiniTest::Unit.after_tests { klass.after_all_tests }  # Deprecated
+    end
   end
 
   ########################
