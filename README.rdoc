@@ -4,8 +4,6 @@ keeping your tests fast.
 
 Moreover top tests can break your build if any test is taking longer than a specified duration.
 
-Since version 0.0.4, Top tests works only with Ruby 2.0 and Rails 4.0
-
 == How to use it?
 Add to your Gemfile.
 
@@ -13,16 +11,7 @@ Add to your Gemfile.
       gem 'top_tests'
     end
 
-Then require top tests and just include it into your test class:
-
-    class SampleTest < MiniTest::Unit::TestCase
-      include TopTests
-
-      # Break your build if any test's duration is longer than ...
-      self.max_duration = 0.5 # Optional, nil by default (in seconds)
-    end
-
-Sample output:
+Then run your test as usual and you will have a similar output:
 
   Top 10 slowest tests:
       0.429 ApplicationControllerTest#test_notify_error
@@ -36,9 +25,9 @@ Sample output:
       0.091 SuricatsControllerTest#test_destroy
       0.090 HoneyBadgersControllerTest#test_show
 
-Sample output when few tests are too slow:
+Run your your with the option `--max-time=SECONDS` to break the tests that are slower than the specified time:
 
-    TEST?FAIL! 3 test(s) are taking longer than 0.2 seconds:
+    3 tests are taking longer than 0.2 seconds:
         0.410 HoneyBadgerTest#test_fighting_a_cobra
         0.228 SuricatTest#test_caught_by_an_eagle
         0.203 HoneyBadgerTest#test_eating_larvae
