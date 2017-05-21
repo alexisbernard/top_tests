@@ -1,16 +1,19 @@
 PATH
   remote: .
   specs:
-    top_tests (0.0.4)
+    top_tests (0.0.6)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    minitest (3.5.0)
+    minitest (5.10.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest (>= 2.11.2)
+  minitest (>= 5.10.2)
   top_tests!
+
+BUNDLED WITH
+   1.13.6
