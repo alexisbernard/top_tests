@@ -54,7 +54,7 @@ module Minitest
     end
 
     def format_tests(tests)
-      tests.map { |t| "  #{format("%7.3f", t.time)} #{t.class}##{t.name}" }.join("\n")
+      tests.map { |t| "  #{format("%7.3f", t.time)} #{t.klass}##{t.name}" }.join("\n")
     end
   end
 end
